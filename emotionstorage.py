@@ -1,0 +1,16 @@
+class EmotionStorage:
+    def __init__(self, adapter):
+        self.adapter = adapter
+
+    def save_emotion(self, data):
+        if self.adapter:
+            self.adapter.save(data)
+
+    def load_emotion(self):
+        if self.adapter:
+            return self.adapter.load()
+        return None
+
+
+def run(*args, **kwargs):
+    return 'run() placeholder - not yet implemented'
