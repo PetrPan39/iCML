@@ -227,7 +227,7 @@ class CML:
 with open(cml_c_path, "w", encoding="utf-8") as f:
     f.write(corrected_cml_c_code)
 
-"Opravený `CML_C.py` byl znovu zapsán se správnou metodou `understand()` a připraven k simulaci."
+"Opravený `CML_C.py` byl znovu zapsán se správnou metodou `understand()` a připraven k simulacim."
 Výsledek
 'Opravený `CML_C.py` byl znovu zapsán se správnou metodou `understand()` a připraven k simulaci.'
 ✅ Soubor CML_C.py byl kompletně opraven a nyní obsahuje plně funkční metodu understand(), která integruje:
