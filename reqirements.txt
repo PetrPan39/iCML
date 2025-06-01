@@ -1,0 +1,29 @@
+# GUI a základní knihovny
+tk
+pillow
+
+# Hlasový výstup
+pyttsx3
+
+# Práce s vektory, grafy, AI
+numpy
+networkx
+
+# OpenAI a prostředí
+openai
+python-dotenv
+
+# Cassandra/Astra (DataStax)
+cassandra-driver
+
+# (Volitelně pro REST API, pokud potřebuješ)
+requests
+
+# (Volitelně pro zvukové vstupy)
+sounddevice
+vosk
+
+# (Volitelně pro další AI/embeddingy)
+sentence-transformers
+
+# (Všechny knihovny jsou v aktuálních verzích kompatibilní s Python 3.10+)

@@ -1,21 +1,21 @@
 @echo off
-REM Nastav kódování konzole na UTF-8, pokud je potřeba
-chcp 65001
+REM ============== SPUSTENI CML/EVO SYSTEMU ==============
 
-REM 0. Aktualizace pipu
-echo Aktualizuji pip...
-python -m pip install --upgrade pip
+REM 1. Aktivace virtuálního prostředí
+call venv\Scripts\activate
 
-REM 1. Instalace závislostí (pokud existuje requirements.txt)
-IF EXIST requirements.txt (
-    echo Instalují se závislosti...
-    pip install -r requirements.txt
-) ELSE (
-    echo Soubor requirements.txt nebyl nalezen, instalace závislostí se přeskočí.
-)
+REM 2. Načtení proměnných prostředí (pokud používáš .env, doporučuji python-dotenv - načte si je program sám)
 
-REM 2. Spuštění hlavního programu
-echo Spouštím hlavní program...
-python main.py
+REM 3. Spuštění Dockeru pro Astra DB (Cassandra) - pokud používáš Astra cloud, tento krok přeskoč
+REM docker compose -f docker\docker-compose.yml up -d
 
+REM 4. Spuštění hlavního dashboardu (GUI)
+python main_dashboard.py
+
+REM 5. (Nepovinné) - Pozdravení uživatele (provádí již program)
+REM echo Systém CML/EVO je připraven. Vítejte!
+
+REM 6. (Nepovinné) - Spuštění dalších služeb, workerů, apod.
+
+REM ============== KONEC ==============
 pause

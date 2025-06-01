@@ -1,21 +1,9 @@
-from core.CML import CML
-
-def main():
-    cml = CML()
-    # Ukázkový text pro evoluci
-    sentences = [
-        "První testovací věta.",
-        "Druhá testovací věta.",
-        "Třetí věta."
-    ]
-    print("Testuji evoluci (optimalizaci):")
-    evoluce_history = cml.testuj_evoluci(sentences, n_iter=10)
-    for krok in evoluce_history:
-        print(f"Krok {krok['step']}: vstup: {krok['input']} | výstup: {krok['output']}")
-
-    print("\nVyhodnocení optimalizace:")
-    vysledek = cml.vyhodnoceni()
-    print(vysledek)
+from evo_core import EvoCore, BinaryTransferModule
 
 if __name__ == "__main__":
-    main()
+    evo = EvoCore(state_count=2)
+    evo.register_module(BinaryTransferModule())
+    vstup = [1, 0, 1, 1, 0, 0, 1, 0]
+    print("Vstupní data:", vstup)
+    vystup = evo.process(vstup)
+    print("Výstupní data EVO:", vystup)
