@@ -1,5 +1,19 @@
-numpy
-matplotlib
+cassandra-driver
+seaborn
 langdetect
-python-dotenv
 openai
+flask
+gunicorn
+astrapy
+fastapi
+uvicorn
+pydantic
+PySimpleGUI>=5.0.0 --extra-index-url https://PySimpleGUI.net/install
+tensorflow==2.15.0
+numpy==1.24.4
+pandas==2.2.0
+scikit-learn==1.4.2
+matplotlib==3.8.4
+requests==2.31.0
+python-dotenv==1.0.1
+
