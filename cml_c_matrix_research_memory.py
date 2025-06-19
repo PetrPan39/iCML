@@ -81,11 +81,11 @@ class MatrixResearchMemory:
 
         # Výsledek váhy
         if present == 4:
-            explanation += "\nZÁVĚR: Všechny složky váhy jsou v harmonické roznováze – tvrzení lze považovat za OBĚV (vědecky podložený, nový poznatek).\n"
+            explanation += "\nZÁVĚR: Všechny složky váhy jsou v harmonické rovnováze – tvrzení lze považovat za objev (vědecky podložený, nový poznatek).\n"
         elif present >= 2:
             explanation += "\nZÁVĚR: Některé složky převažují – tvrzení je variantou, modifikací či novou aplikací známých faktů.\n"
         else:
-            explanation += "\nZÁVĚR: Chybí harmonická roznováha – tvrzení je FIKCE nebo zatím neověřený nápad.\n"
+            explanation += "\nZÁVĚR: Chybí harmonická rovnováha – tvrzení je FIKCE nebo zatím neověřený nápad.\n"
 
         return explanation
 
